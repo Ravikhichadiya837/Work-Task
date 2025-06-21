@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* 01 Float an image to the left */
+        .float-left {
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* 02 Float a div to the right */
+        .float-right {
+            float: right;
+            background-color: lightblue;
+            padding: 10px;
+            width: 200px;
+        }
+
+        /* 03 Two-column layout using float */
+        .two-column {
+            overflow: hidden; /* Clearfix method */
+        }
+        .column {
+            float: left;
+            width: 45%;
+            margin-right: 5%;
+        }
+        .column:last-child {
+            margin-right: 0;
+        }
+
+        /* 04 Clear float layout */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* 05 Card layout with floated image */
+        .card {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            overflow: hidden; /* Clearfix to accommodate floated image */
+        }
+        .card-img {
+            float: left;
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+
+        /* 06 Blog layout with floated images */
+        .blog-post {
+            margin-bottom: 20px;
+        }
+
+        /* 07 Floating elements in both directions */
+        .float-both {
+            margin: 10px 0;
+        }
+        .float-left-example {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            margin-right: 10px;
+        }
+        .float-right-example {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-left: 10px;
+        }
+
+        /* 08 Align buttons horizontally */
+        .button-container {
+            overflow: hidden; /* Clearfix */
+            margin: 10px 0;
+        }
+        .button {
+            float: left;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        /* 09 Combine floated elements with margin */
+        .margin-example {
+            float: left;
+            width: 30%;
+            margin-right: 5%;
+            background-color: lightyellow;
+            padding: 10px;
+        }
+        
+        /* 10 Clearfix to prevent overflow */
+        .clearfix2::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+ 
+
+<h1>    01 Float an image to the left</h1>
+    <img src="/web/logork.png" class="float-left" alt="Placeholder" />
+    <p>This text wraps around the image floated to the left. It demonstrates how text can flow around a floated element. The float property allows us to position elements next to each other and create visually appealing layouts.</p>
+
+  <h1>  02 Float a div to the right</h1>
+    <div class="float-right">This div is floated to the right with a background color.</div>
+
+  <h1>  03 Two-column layout</h1>
+    <div class="two-column clearfix">
+        <div class="column" style="background-color: lightgrey;">Column 1 Content</div>
+        <div class="column" style="background-color: lightpink;">Column 2 Content</div>
+    </div>
+
+  <h1>  04 Add multiple floated elements and clear</h1>
+    <div class="clearfix">
+        <div class="float-left" style="background-color: lightcoral; width: 90px; height: 90px;"></div>
+        <div class="float-left" style="background-color: lightseagreen; width: 90px; height: 90px;"></div>
+        <div class="float-left" style="background-color: lightgoldenrodyellow; width: 90px; height: 90px;"></div>
+    </div>
+
+<h1>    05 Card layout with floated image</h1>
+    <div class="card">
+        <div class="card-img" style="background-image: url('/web/logork.png');"></div>
+        <h3>Card Title</h3>
+        <p>This is some text in a card layout with a floated image. The text wraps around the image nicely.</p>
+    </div>
+
+ <h1>   06 Simple blog layout</h1>
+    <div class="blog-post clearfix">
+        <img src="/web/logork.png" class="float-left" alt="Placeholder" />
+        <h3>Blog Post Title</h3>
+        <p>This is a short blog post. The floated image on the left allows the text to wrap around it, creating an attractive blog layout.</p>
+    </div>
+
+<h1>    07 Experiment with floating elements in both directions</h1>
+    <div class="float-both clearfix">
+        <div class="float-left-example"></div>
+        <div class="float-right-example"></div>
+    </div>
+
+  <h1>  08 Align buttons horizontally</h1>
+    <div class="button-container clearfix">
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+        <button class="button">Button 3</button>
+    </div>
+
+   <h1> 09 Combine floated elements with margin</h1>
+    <h2>Margin Example</h2>
+    <div class="margin-example">Floated Element 1</div>
+    <div class="margin-example">Floated Element 2</div>
+    <div class="margin-example">Floated Element 3</div>
+
+   
+<h1> 10 Add clearfix to prevent overflow</h1>
+    <div class="clearfix2">
+        <p>This container has clearfix applied to ensure that it contains its floated child elements. Proper use of clearfix is essential for maintaining the layout when working with floated elements.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 04</title>
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggleImage()">Toggle Image Visibility</button>
+    <img id="myImage" src=
+    "../Display None and Visibility/img/download 01.png" alt="An example image" class="hidden">
+
+    <script>
+        function toggleImage() {
+            const image = document.getElementById('myImage');
+            if (image.classList.contains('hidden')) {
+                image.classList.remove('hidden');
+            } else {
+                image.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Squares</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #5B7EA9;
+            border:  black 10px solid;
+        
+        }
+        .S {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border:  black 10px solid;
+       
+        }
+        .S1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border:  black 10px solid;
+    
+        }
+        
+        .red { background-color: red; top: -50px; left: -20px; }
+        .orange { background-color: orange; top: 55px; left: 55px; z-index: 2; }
+        .blue { background-color: deepskyblue; top: 115px; left: 115px; z-index: 3; }
+        .yellow { background-color: yellow; top: 175px; left: 175px; z-index: 4; }
+        .purple { background-color: purple; top: 230px; left: 230px; z-index: 5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="S1 red"></div>
+        <div class="S orange"></div>
+        <div class="S blue"></div>
+        <div class="S yellow"></div>
+        <div class="S1 purple"></div>
+    </div>
+</body>
+</html>

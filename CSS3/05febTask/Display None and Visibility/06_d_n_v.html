@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 06</title>
+    <style>
+        .answer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h3 onclick="toggleAnswer(1)">What is your name?</h3>
+    <p class="answer" id="answer1">My name is John Doe.</p>
+
+    <h3 onclick="toggleAnswer(2)">What do you do?</h3>
+    <p class="answer" id="answer2">I am a web developer.</p>
+
+    <script>
+        function toggleAnswer(number) {
+            const answer = document.getElementById(`answer${number}`);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

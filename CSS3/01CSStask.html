@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            padding: 20px;
+        }
+        h2{background-color: rgb(0, 111, 111); text-align: center;}
+
+        table {
+            margin-bottom: 20px; 
+            width: 100%;
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        th, td {
+            border: 2px solid #00eaff; 
+            padding: 12px; 
+            text-align: center; 
+        }
+
+        th {
+            background-color: #007BFF; 
+            color: white; 
+            font-weight: bold; 
+        }
+
+        
+        tr:nth-child(odd) {
+            background-color: #e6f7ff; 
+        }
+        tr:nth-child(even) {
+            background-color: #ffffff; 
+        }
+
+        
+        tbody tr:hover {
+            background-color: #b3e0ff; 
+        }
+
+        
+        table {
+            border-spacing: 0; 
+        }
+
+        
+        .pricing-table {
+            border-collapse: collapse; 
+        }
+        .pricing-table th {
+            background-color: #28a745; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Table with Solid Border and Collapsed Borders</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item A</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Item B</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2. Zebra-Striped Table with Alternating Row Colors</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>35</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Table Header with Bold Font and Different Background Color</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>$15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. Center-Aligned Content in Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>USA</td>
+                <td>Washington, D.C.</td>
+            </tr>
+            <tr>
+                <td>Canada</td>
+                <td>Ottawa</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5. Table with Padding for Better Spacing</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Task 1</td>
+                <td>Complete</td>
+            </tr>
+            <tr>
+                <td>Task 2</td>
+                <td>In Progress</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>6. Table with Border-Spacing</h2>
+    <table style="border-spacing: 10px;">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Service A</td>
+                <td>1 hour</td>
+            </tr>
+            <tr>
+                <td>Service B</td>
+                <td>30 minutes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>7. Table with Hover Effect</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Animal</th>
+                <th>Sound</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dog</td>
+                <td>Bark</td>
+            </tr>
+            <tr>
+                <td>Cat</td>
+                <td>Meow</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>8. Table with Rounded Corners</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Climate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tropical</td>
+                <td>Hot and humid</td>
+            </tr>
+            <tr>
+                <td>Desert</td>
+                <td>Hot and dry</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>9. Pricing Table with Styled Borders and Background Colors</h2>
+    <table class="pricing-table">
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Monthly Price</th>
+                <th>Features</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic</td>
+                <td>$9.99</td>
+                <td>Basic features</td>
+            </tr>
+            <tr>
+                <td>Standard</td>
+                <td>$19.99</td>
+                <td>Standard features</td>
+            </tr>
+            <tr>
+                <td>Pro</td>
+                <td>$29.99</td>
+                <td>All features</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>10. Complete Styled Pricing Table</h2>
+    <table class="pricing-table">
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Price</th>
+                <th>Features</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic</td>
+                <td>$9.99/month</td>
+                <td>Up to 10 projects</td>
+            </tr>
+            <tr>
+                <td>Standard</td>
+                <td>$19.99/month</td>
+                <td>Up to 50 projects</td>
+            </tr>
+            <tr>
+                <td>Premium</td>
+                <td>$29.99/month</td>
+                <td>Unlimited projects</td>
+            </tr>
+            <tr>
+                <td>Enterprise</td>
+                <td>$49.99/month</td>
+                <td>Custom features and support</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

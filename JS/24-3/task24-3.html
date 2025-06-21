@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Generator</title>
+    <style>
+       
+        table {
+            background-color: black;
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            color: aliceblue ;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 10px;
+            text-align: center;
+        }
+        input {
+            width: 50px;
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <h1>Dynamic Table Generator </h1>
+        <h2>Description: Create a form where users input the number of rows and columns and dynamically generate a table.</h2>
+        <h2>Skills Tested: DOM manipulation, event handling, and working with arrays.</h2>
+        
+    <label for="rows">Rows:</label>
+
+    <input type="number" id="rows" min="1">
+
+    <label for="columns">Columns:</label>
+
+    <input type="number" id="columns" min="1">
+
+    <button onclick="generateTable()">Generate Table</button>
+  
+
+    <div id="table-container"></div>
+
+    <script>
+        function generateTable() {
+            let rows = document.getElementById("rows").value;
+            let cols = document.getElementById("columns").value;
+            let container = document.getElementById("table-container");
+            
+            container.innerHTML = "";
+
+        
+            let table = document.createElement("table");
+
+                for (let i = 0; i < rows; i++)
+                 {
+                let tr = document.createElement("tr");
+
+                for (let j = 0; j < cols; j++) {198
+
+                    let td = document.createElement("td");
+             
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+                 }
+
+            container.appendChild(table);
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- 1. फ़ंक्शन डिफ़ाइन करना
+javascript
+Copy
+Edit
+function generateTable() {
+यह generateTable() नाम की एक फंक्शन (Function) डिफाइन कर रहा है, जिसे कॉल करने पर यह नया टेबल बनाएगा।
+
+
+
+2. उपयोगकर्ता द्वारा इनपुट प्राप्त करना
+javascript
+Copy
+Edit
+let rows = document.getElementById("rows").value;
+let cols = document.getElementById("columns").value;
+यह कोड document.getElementById("rows") के द्वारा HTML इनपुट फ़ील्ड से उपयोगकर्ता द्वारा दर्ज की गई रो (Rows) की संख्या प्राप्त करता है।
+
+document.getElementById("columns") से कॉलम (Columns) की संख्या प्राप्त करता है।
+
+value का उपयोग इन इनपुट फ़ील्ड्स के अंदर लिखे गए नंबर को एक्सेस करने के लिए किया जाता है।
+
+
+
+3. पहले से मौजूद टेबल को हटाना
+javascript
+Copy
+Edit
+let container = document.getElementById("table-container");
+container.innerHTML = "";
+table-container नाम के div को जावास्क्रिप्ट से एक्सेस करता है।
+
+innerHTML = "" सेट करने से पहले से मौजूद टेबल को हटाया जाता है, ताकि हर बार नया टेबल साफ स्क्रीन पर दिखे।
+
+
+
+4. नया टेबल (Table) बनाना
+javascript
+Copy
+Edit
+let table = document.createElement("table");
+document.createElement("table") का उपयोग करके एक नई HTML टेबल बनाई जाती है।
+
+
+
+
+5. टेबल में रो (Rows) और कॉलम (Columns) जोड़ना
+javascript
+Copy
+Edit
+for (let i = 0; i < rows; i++) {
+    let tr = document.createElement("tr");
+for लूप का उपयोग करके rows जितनी बार लूप चलेगा और प्रत्येक बार एक नया <tr> (टेबल रो) एलिमेंट बनाया जाएगा।
+
+javascript
+Copy
+Edit
+for (let j = 0; j < cols; j++) {198
+🚨 यहाँ टाइपिंग मिस्टेक (Syntax Error) है।
+{198 गलत है, इसे { होना चाहिए।
+
+javascript
+Copy
+Edit
+    let td = document.createElement("td");
+    tr.appendChild(td);
+for लूप कॉलम की संख्या (cols) जितनी बार चलेगा और हर रो (tr) के अंदर एक नई <td> (टेबल डेटा सेल) एलिमेंट जोड़ेगा।
+
+appendChild(td) के द्वारा <td> को <tr> के अंदर जोड़ा जाता है।
+
+
+
+
+    
+6. टेबल को HTML में जोड़ना
+javascript
+Copy
+Edit
+table.appendChild(tr);
+प्रत्येक <tr> को तैयार टेबल के अंदर जोड़ दिया जाता है।
+
+javascript
+Copy
+Edit
+container.appendChild(table);
+अब पूरा तैयार हुआ टेबल div के अंदर जोड़ दिया जाता है, जिससे यह स्क्रीन पर दिख सके। -->

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and Block Elements Example</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+          
+            padding: 20px;
+        }
+        h1{background-color: rgb(94, 94, 94); text-align: left;color:#ffffff;}
+        h2{background-color: rgb(94, 94, 94); text-align: left;color:#ffffff;}
+
+        /* 01 Create an inline element with a background color and padding */
+        .inline-element {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        /* 02 Style for demonstration of inline div */
+        .inline-div {
+            display: inline; /* Changing <div> to inline */
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        /* 03 Creating a navigation bar with inline-block links */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        /* 04 Styling two span elements differently */
+        .block-style {
+            display: block;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .inline-style {
+            display: inline;
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* 05 Set width and height for inline-block elements */
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+        }
+
+        /* 06 Style a button using inline-block */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* 07 Align multiple inline-block elements horizontally */
+        .inline-wrapper {
+            text-align: center;
+        }
+
+        /* 08 Margins for inline and inline-block elements */
+        .margin-example {
+            display: inline-block;
+            background-color: lightgrey;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* 09 Create a gallery layout */
+        .gallery {
+            text-align: center;
+        }
+        .gallery img {
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            margin: 5px;
+            border: 2px solid #ccc;
+        }
+
+        /* 10 Combining block and inline elements */
+        .block-inline-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .block-element {
+            display: block;
+            background-color: lightpink;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .inline-element2 {
+            display: inline;
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>01 </h1>
+    <h2>Inline and Block Elements Example</h2>
+
+
+    <p class="inline-element">This is an inline element.</p>
+
+   <h1> 02 </h1>
+   <h2>Div as Inline</h2>
+    <div class="inline-div">This is a div styled as inline.</div>
+    <p>When changed to inline, the <div> does not start on a new line and allows other elements to be next to it.</p>
+
+   <h1> 03 </h1>
+   <h2>Navigation Bar</h2>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+   <h1> 04 </h1>
+   <h2>Compare Inline and Block</h2>
+    <span class="block-style">Block Styled Span</span>
+    <span class="inline-style">Inline Styled Span</span>
+
+  <h1>  05 </h1>
+  <h2>Inline-block Elements</h2>
+    <div class="inline-wrapper">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+    </div>
+
+   <h1> 06 </h1>
+   <h2>Styled Button</h2>
+    <button class="button">Styled Button</button>
+
+    <h1>07 </h1>
+    <h2>Align Elements Horizontally</h2>
+    <div class="inline-wrapper">
+        <div class="margin-example">Inline Block 1</div>
+        <div class="margin-example">Inline Block 2</div>
+        <div class="margin-example">Inline Block 3</div>
+    </div>
+
+  <h1>  09 </h1>
+  <h2>Gallery Layout</h2>
+    <div class="gallery">
+        <img src="/web/logork.png" alt="Image 1">
+        <img src="/web/logork.png" alt="Image 2">
+        <img src="/web/logork.png" alt="Image 3">
+    </div>
+
+   <h1> 10 </h1>
+   <h2>Block and Inline Elements Combined</h2>
+    <div class="block-inline-container">
+        <div class="block-element">This is a block element.</div>
+        <span class="inline-element2">This is an inline element in a block container.</span>
+    </div>
+
+</body>
+</html>
