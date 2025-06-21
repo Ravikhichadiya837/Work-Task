@@ -1,0 +1,174 @@
+Hello - નમસ્તે
+Thank you - આભાર
+Goodbye - વિદાય
+Please - કૃપા કરીને
+Yes - હા
+No - ના
+Sorry - ક્ષમા કરશો
+Help - મદદ
+Friend - મીત્ર
+Family - પરિવાર
+Home - ઘર
+Water - પાણી
+Food - ખોરાક
+Love - પ્રેમ
+Happy - ખુશ
+Sad - દુઃખ
+Angry - રોષિત
+Beautiful - સુંદર
+Big - મોટું
+Small - નાનું
+Hot - ગરમ
+Cold - ઠંડા
+Easy - સરળ
+Difficult - કઠિન
+Good - સારી
+Bad - નજીક
+Like - ગમતું
+Dislike - નગણતા
+Today - આજે
+Tomorrow - કાલે
+Yesterday - ગઈ કાલે
+Morning - સવારે
+Evening - સાંજે
+Night - રાત
+Work - કામ
+School - શાળા
+Book - નવલું
+Pencil - પેન્સિલ
+Pen - કલમ
+Paper - કાગળ
+Coat - જુદા
+Shirt - ટી-શર્ટ
+Trouser - પેન્ટ
+Shoe - બૂટ
+Car - કાર
+Bus - બસ
+Train - ટ્રેન
+Bicycle - સાઇકલ
+Market - બજાર
+Money - નક તો
+Price - કિંમત
+Buy - ખરીદવું
+Sell - વેચવું
+Open - ખોલવું
+Close - બંધવું
+Start - શરૂ કરવું
+Finish - પૂરો કરવો
+Play - રમવા
+Sing - ગાવું
+Dance - નાચવું
+Red - લાલ 
+Black - કાળો
+White - સફેદ 
+Blue - નીલા
+Yellow - પીળો 
+Turmeric - હળદર  
+Silver - છાંદ્રક 
+Gold - સોનું
+Purple - જાંબલી
+Pink - ગુલાબી
+Sunday - રવિવાર 
+Monday - સોમવાર 
+Tuesday - મંગળવાર 
+Wednesday - બુધવાર 
+Thursday - ગુરુવાર 
+Friday - શુક્રવાર 
+Saturday - શનિવાર 
+January - જાન્યુઆરી 
+Febearuary - Feberuary  
+March - માર્ચ 
+April - એપ્રિલ 
+May - મે 
+June - જૂન 
+July - જુલાઈ 
+August - ઓગસ્ત 
+September - સેપ્ટેમ્બર 
+October - ઓકટોબર 
+November - નવેમ્બર 
+December - ડિસેમ્બર 
+All - બધા 
+Name - નામ 
+Vind - પવન 
+Roof - છાપરા 
+Ring - વિટી 
+king - રાજા 
+Queen - રાની 
+Apple - સફરજન 
+Bnana - કેળાં 
+Cocount - નારિયળ 
+fen - પંખો 
+School - શાળા 
+
+
+
+
+
+
+
+
+
+
+Subject: Leave Application
+
+Dear [Sir],
+
+I hope this message finds you well. I am writing to formally request leave from [24/Apr/2025] to [05/May/2025] due to [brief reason for leave EXAM].
+
+
+I have ensured that my current tasks are on schedule and will complete any urgent responsibilities before my leave begins. I will also be available to
+assist with any necessary transitions during my absence. If needed, I can be reached via email or phone for any urgent matters.
+
+Thank you for considering my request. I look forward to your understanding and support.
+
+
+Best regards,
+
+[Ravi khichadiya]
+[]
+[Your Contact Information] 
+
+
+
+
+
+
+Type 1: 
+
+About Me:
+I am a passionate and dedicated UI/UX designer with a strong foundation in user-centered design principles. 
+I recently completed my degree in [Your Degree] from [Your University], where I developed my skills in wireframing, 
+prototyping, and usability testing. My goal is to create engaging and intuitive digital experiences that solve real 
+problems for users. I am excited to learn from industry professionals and contribute to innovative projects that enhance user interaction.
+
+Type 2: 
+About Me:
+As a recent graduate in UI/UX design, I thrive on transforming complex challenges into simple, 
+user-friendly solutions. My hands-on experience with design tools such as Figma and Adobe XD, 
+combined with a solid understanding of user research and interaction design, equips me to create
+ effective designs. I am eager to dive into the industry and collaborate with teams to enhance user 
+experiences while pushing the boundaries of creativity and innovation.
+
+Type 3: 
+About Me:
+I am a UI/UX design graduate skilled in both the artistic and technical aspects of design. 
+I have a strong understanding of design principles, along with technical proficiency in 
+HTML, CSS, and JavaScript. My academic projects involved creating responsive web designs 
+that focus on usability and accessibility. I am enthusiastic about applying my unique background 
+to develop solutions that not only look good but function seamlessly, enhancing the overall user experience.
+
+Type 4:
+About Me:
+Driven by a desire to advocate for users, I have recently graduated with a degree in 
+UI/UX design. My education has instilled in me a deep understanding of user research
+ methodologies and the design thinking process. I have conducted various usability tests
+ and user interviews, giving me valuable insights into users' needs and behaviors. My mission
+ is to create user-centered designs that empower users and ensure their voices are heard in every design decision.
+
+Type 5:
+About Me:
+I am a motivated UI/UX designer with a collaborative spirit and a commitment to creating exceptional
+ user experiences. Having worked on several team projects during my studies, I understand the importance 
+of communication and teamwork in the design process. I have experience in conducting workshops and brainstorming 
+sessions to gather diverse perspectives. I am excited to join a dynamic team where I can contribute my skills 
+in design thinking and user research while continuing to grow as a designer.
