@@ -1,0 +1,73 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jscript/myExternalJs.js"></script>
+    <script language="javascript" type="text/javascript"> 
+
+        $(document).ready(function() {
+          $("#add").on("click", function() { //hadle click and "Enter" event
+              var val = $("input").val(); //get user input value
+              
+              if(val !== '') {
+                  var elem = $("<li></li>").text(val); //create new element
+                  $(elem).append("<button class='rem'>X</button>"); //add x button to new element
+                  $("#mylist").append(elem); //add new element at the end of my list
+                  $("input").val(""); //clear the input
+                  $(".rem").on("click", function() { //handle click on x button
+                      $(this).parent().remove(); //remove "current => this" object
+                  });
+              
+            }
+          });
+
+        $('#value').keypress(function(e){
+              if(e.which == 13){//Enter key pressed
+                  $('#add').click();//Trigger Add button click event
+              }
+          });
+        });
+      </script>
+
+     <!-- ===== Fontawsome ICONS ===== -->
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     
+     <!-- ===== Google Font ===== -->
+     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+     
+     <!-- ===== JQuery ===== -->
+
+     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js">  </script>
+
+    
+    <!-- ===== CSS Style ===== -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+
+    <title>To-Do List </title>
+
+    <!--Browser logo-->
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="30x20"
+    href="https://cdn.iconscout.com/icon/free/png-256/to-do-list-3811741-3169785.png"
+/>
+  </head>
+  <body>
+    <div>
+      <h1>My To-Do List</h1>
+      <input type="text" id="value" placeholder="New List" />
+      <button id="add">Add</button>
+      <ol id="mylist"></ol>
+  </div>
+  </body>
+</html>

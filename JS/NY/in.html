@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wordle Clone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121213;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      grid-gap: 5px;
+      margin-top: 20px;
+    }
+    .cell {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #3a3a3c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #121213;
+    }
+    .correct {
+      background-color: #538d4e;
+    }
+    .present {
+      background-color: #b59f3b;
+    }
+    .absent {
+      background-color: #3a3a3c;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Wordle Clone</h1>
+<div class="grid" id="grid"></div>
+
+<script>
+  const WORD = "ADMIN";
+  const WORD_LENGTH = 5;
+  const MAX_GUESSES = 6;
+
+  let currentGuess = "";
+  let currentRow = 0;
+
+  const grid = document.getElementById("grid");
+
+  // Create 6x5 grid
+  for (let i = 0; i < MAX_GUESSES * WORD_LENGTH; i++) {
+    const div = document.createElement("div");
+    div.className = "cell";
+    div.id = `cell-${Math.floor(i / WORD_LENGTH)}-${i % WORD_LENGTH}`;
+    grid.appendChild(div);
+  }
+
+  document.addEventListener("keydown", handleKey);
+
+  function handleKey(e) {
+    if (currentRow >= MAX_GUESSES) return;
+
+    if (e.key === "Backspace") {
+      currentGuess = currentGuess.slice(0, -1);
+      updateGrid();
+    } else if (e.key === "Enter") {
+      if (currentGuess.length === WORD_LENGTH) {
+        checkGuess();
+      }
+    } else if (/^[a-zA-Z]$/.test(e.key)) {
+      if (currentGuess.length < WORD_LENGTH) {
+        currentGuess += e.key.toUpperCase();
+        updateGrid();
+      }
+    }
+  }
+
+  function updateGrid() {
+    for (let i = 0; i < WORD_LENGTH; i++) {
+      const cell = document.getElementById(`cell-${currentRow}-${i}`);
+      cell.textContent = currentGuess[i] || "";
+      cell.className = "cell"; // reset class
+    }
+  }
+
+  function checkGuess() {
+    for (let i = 0; i < WORD_LENGTH; i++) {
+      const cell = document.getElementById(`cell-${currentRow}-${i}`);
+      const letter = currentGuess[i];
+      if (letter === WORD[i]) {
+        cell.classList.add("correct");
+      } else if (WORD.includes(letter)) {
+        cell.classList.add("present");
+      } else {
+        cell.classList.add("absent");
+      }
+    }
+
+    if (currentGuess === WORD) {
+      setTimeout(() => alert("🎉 You guessed it right!"), 200);
+      document.removeEventListener("keydown", handleKey);
+    } else {
+      currentRow++;
+      currentGuess = "";
+
+      if (currentRow === MAX_GUESSES) {
+        setTimeout(() => alert(`❌ Game Over! The word was: ${WORD}`), 200);
+        document.removeEventListener("keydown", handleKey);
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

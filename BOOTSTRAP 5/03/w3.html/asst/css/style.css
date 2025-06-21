@@ -1,0 +1,153 @@
+
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+
+.danger{ color: red;}
+
+
+
+
+
+
+
+        .sec-one {
+  background-color: aliceblue;
+  color: white;
+  width: 30%;
+  border-radius: 5%;
+}
+
+.sec-two h3 {
+  font-size: 38px;
+  font-weight: bold;
+  width: 60%;
+  margin: auto;
+}
+
+.slider-icon i {
+  font-size: 50px;
+  color: black;
+
+}
+
+.icon i {
+  color: red;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.box-wrap {
+  padding: 40px 10px;
+  transition: all 0.5s ease 0s;
+  position: relative;
+  color: rgb(255, 0, 119);
+  border-radius: 10px;
+}
+
+a.read {
+  font-size: 20px;
+  border-bottom: 2px solid red;
+  color: black;
+  font-weight: 600;
+  border-radius: 0;
+  margin-top: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+a.read:hover {
+  color: red
+}
+
+
+h4.number {
+  position: absolute;
+  font-size: 50px;
+  right: 40px;
+  top: 30px;
+  opacity: .09;
+  transition: 0.3s ease-in-out;
+}
+
+.sec-four h3 {
+  font-size: 38px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.sec-four img {
+  border-radius: 3%;
+  box-shadow: 30px 30px 30px rgb(0 0 0 / 20%);
+  ;
+}
+
+.red-image {
+
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  left: -85px;
+  bottom: 38px;
+  padding: 40px;
+  box-shadow: 30px 30px 30px rgb(0 0 0 / 20%);
+  min-width: 300px;
+  border-radius: 0 0 100px 0;
+  text-align: center;
+}
+
+.red-image .red-image-title {
+  font-size: 70px;
+  line-height: 80px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.red-image p {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.sec-five h3 {
+  font-size: 38px;
+  font-weight: bold;
+  width: 45%;
+  margin: auto;
+}
+.sear{
+  background-color: red;
+  border-radius: 5%;
+}
+
+
+
+    .search-wrapper {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #dc3545;
+    }
+    .btn-red {
+      background-color: #dc3545;
+      color: white;
+    }
+    .btn-dark-icon {
+      background-color: #212529;
+      color: white;
+    }

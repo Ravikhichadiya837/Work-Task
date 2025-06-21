@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Basics – Variables & Functions</title>
+</head>
+<body>
+  <h1>JavaScript Variable and Function Examples</h1>
+  <p>Check your browser console (Right-click → Inspect → Console)</p>
+
+  <script>
+    // ✅ VARIABLES
+
+
+
+     //01
+    let firstName = "Dj"; 
+    let lastName = "Adam";
+    const country = "Barmuda"; 
+    var age = 22; 
+
+    console.log("Full Name:", firstName + " " + lastName);
+    console.log("Country:", country);
+    console.log("Age:", age);
+
+
+
+    //02
+    let score = 10;
+    console.log("Original score:", score);
+    score = 20;
+    console.log("Updated score:", score);
+
+    // ❌ This will cause an error because 'const' cannot be reassigned
+    // const language = "JavaScript";
+    // language = "Python"; // Uncaught TypeError
+
+
+
+    
+    // ✅ FUNCTIONS
+
+    // 01
+    function greet() {
+      console.log("Hello, welcome!");
+    }
+    greet(); 
+
+    // Function with a parameter
+    function greetUser(name) {
+      console.log("Hello, " + name + "!");
+    }
+    greetUser("adanm");
+    greetUser("kelly");
+
+    // 02
+    function square(number) {
+      console.log("Square of", number, "is", number * number);
+    }
+    square(9);
+    square(15);
+
+    //03
+    function multiply(a, b) {
+      return a * b;
+    }
+    let result = multiply(5, 6);
+    console.log("Multiplication Result:", result);
+
+    //04
+    function checkAge(age) {
+      if (age >= 18) {
+        console.log("You are an adult.");
+      } else {
+        console.log("You are a minor.");
+      }
+    }
+    checkAge(20);
+    checkAge(16);
+
+    //05
+    function addNumbers(x, y) {
+      console.log("Sum is:", x + y);
+    }
+    addNumbers(10, 15);
+
+    //05
+    let a = 100;
+    let b = 200;
+    console.log("Before swap: a =", a, ", b =", b);
+    let temp = a;
+    a = b;
+    b = temp;
+    console.log("After swap: a =", a, ", b =", b);
+
+    //06
+    let x = 5, y = 10;
+    console.log("Before swap: x =", x, ", y =", y);
+    x = x + y;
+    y = x - y;
+    x = x - y;
+    console.log("After swap: x =", x, ", y =", y);
+
+  </script>
+</body>
+</html>

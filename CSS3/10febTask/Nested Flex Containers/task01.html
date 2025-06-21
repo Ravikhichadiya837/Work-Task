@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Level Flex Layout</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 10px;
+    }
+    .item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #000;
+      padding: 20px;
+    }
+    .nested-item {
+      flex: 1;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      <div class="nested-item">Nested Item 1</div>
+      <div class="nested-item">Nested Item 2</div>
+    </div>
+    <div class="item">
+      <div class="nested-item">Nested Item 3</div>
+      <div class="nested-item">Nested Item 4</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centered Slider</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .slider-data {
+      width: 300px;
+      height: 250px;
+      position: relative;
+    }
+
+    .slider-image {
+      position: absolute;
+      top: -250px;
+      left: 610px;
+        /* width: 100%;
+        height: 100%; */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slider-image img {
+     width: 300px ;
+     height: 300px ;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .my-class {
+      display: none;
+    }
+
+    .disp-block {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slider-data">
+    <div class="slider-image"><img src="./1.png" alt="1st image"></div>
+    <div class="slider-image"><img src="./2.png" alt="2nd image"></div>
+    <div class="slider-image"><img src="./3.png" alt="3rd image"></div>
+    <div class="slider-image"><img src="./4.png" alt="4th image"></div>
+  </div>
+
+  <script>
+    let SliderData = document.getElementsByClassName("slider-image");
+    let counter = 0;
+
+    function Slider() {
+      for (let i = 0; i < SliderData.length; i++) {
+        SliderData[i].classList.remove("disp-block");
+        SliderData[i].classList.add("my-class");
+      }
+
+      const currentIndex = counter % SliderData.length;
+      SliderData[currentIndex].classList.remove("my-class");
+      SliderData[currentIndex].classList.add("disp-block");
+
+      console.log("Showing image index:", currentIndex);
+
+      counter++;
+      setTimeout(Slider, 1);
+    }
+
+    Slider();
+  </script>
+
+</body>
+
+</html>

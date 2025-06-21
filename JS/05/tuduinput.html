@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Form with Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #display {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      min-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Input and Display</h1>
+  <form id="inputForm">
+    <label for="userInput">Enter Text:</label>
+    <input type="text" id="userInput" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="display"></div>
+
+  <script>
+    const dataArray = [];
+    const form = document.getElementById('inputForm');
+    const displayDiv = document.getElementById('display');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      const userInput = document.getElementById('userInput').value;
+      dataArray.push(userInput);
+      console.log("User Input:", userInput);
+      console.log("Updated Array:", dataArray);
+      document.getElementById('userInput').value = '';
+      displayDiv.innerHTML = dataArray.map(item =>` <p>${item}</p>`).join('');
+    });
+  </script>
+  
+</body>
+</html>

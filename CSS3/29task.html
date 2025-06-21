@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: #ffffff;}
+        h1{background-color: aqua; text-align: center;}
+        h2{background-color: rgb(0, 111, 111); text-align: center;}
+        .c{ list-style: circle;}
+        .u-r { list-style: upper-roman;}
+        .i-b  {list-style-image: url('../avni/09.jpg');}
+       
+
+
+nav {
+    width: 200px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.nav-menu li {
+    border-bottom: 1px solid #ccc; 
+}
+
+.nav-menu li:last-child {
+    border-bottom: none; 
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333; 
+    transition: background 0.3s; 
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0; 
+    color: #000; 
+}
+.nested-list {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+
+.nested-list > li {
+    font-weight: bold; 
+    margin: 10px 0; 
+}
+
+
+.nested-list > li > ul {
+    list-style-type: circle; 
+    margin-left: 20px; 
+}
+
+
+.nested-list > li > ul > li > ul {
+    list-style-type: square;
+    margin-left: 20px; 
+}
+
+
+.nested-list a {
+    text-decoration: none; 
+    color: #007BFF; 
+}
+
+.nested-list a:hover {
+    text-decoration: underline; 
+}
+
+.plain-list {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.plain-list li {
+    margin: 5px 0;
+}
+
+
+.plain-list ul {
+    padding-left: 20px;
+    list-style: none; 
+}
+
+.list-with-inside-markers {
+    list-style: disc; 
+    list-style-position: inside; 
+}
+
+.list-with-inside-markers li {
+    position: relative; 
+}
+
+
+.list-with-inside-markers ul {
+    list-style: none; 
+    padding-left: 0; 
+    margin-left: 0; 
+}
+.custom-marker-list {
+    counter-reset: list-counter;
+    list-style: none; 
+    padding-left: 0; 
+}
+
+.custom-marker-list li {
+    counter-increment: list-counter; 
+    margin: 10px 0; 
+    position: relative; 
+    padding-left: 30px; 
+}
+
+.custom-marker-list li::before {
+    content: "👉 ";
+    font-size: 1.2em; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+}
+.multi-column-list {
+    column-count: 3; 
+    column-gap: 20px; 
+}
+
+.multi-column-list ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+.multi-column-list li {
+    position: relative; 
+    margin-bottom: 10px; 
+    padding-left: 25px; 
+}
+
+.multi-column-list li::before {
+    content: "✔ "; 
+    font-size: 1.5em; 
+    color: #009688; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+}
+.multi-column {
+    max-width: 800px; 
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr); 
+    gap: var(--column-gap);
+}
+
+.m-c {
+    list-style: none; 
+    padding: 0; 
+}
+
+.m-c2 {
+    break-inside: avoid; 
+    padding: 5px 0; 
+}
+
+
+.m-c::marker {
+    content: var(--marker-icon); 
+    color: var(--marker-color); 
+}
+    </style>
+</head>
+       <body>
+
+
+
+
+
+     <h1>01</h1>
+          <h2>Crente an unordered list with circle bullets.</h2>
+               <ul class="c">
+                    <li >Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+               </ul>
+
+
+
+
+
+     <h1>02</h1>
+          <h2>Style an ordered list to uso Roman numerals (list-style-type; upper-roman)</h2>
+               <ol class="u-r">
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+              </ol>
+
+
+
+
+
+     <h1>03</h1>
+          <h2>Replace list bullets with a custom image using list-style-image.</h2>
+               <ul class="i-b">
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+                    <li>Ravi khichadiya</li>
+               </ul>
+
+
+
+
+
+     <h1>04</h1>
+          <h2>Create a vertical navigation menu using a styled list.</h2>
+               <nav>
+                    <ul class="nav-menu">
+                         <li><a href="#home">Ravi</a></li>
+                         <li><a href="#about">Ravi</a></li>
+                         <li><a href="#services">Ravi</a></li>
+                         <li><a href="#portfolio">Ravi</a></li>
+                         <li><a href="#contact">Ravi</a></li>
+                    </ul>
+               </nav>
+
+
+
+
+
+     <h1>05</h1>
+          <h2>Style a nested list with different bullet types for each level.</h2>
+               <ul class="nested-list">
+                    <li>Item 1
+                         <ul>
+                              <li>Ravi 1.1</li>
+                              <li>Ravi 1.2
+                                   <ul>
+                                        <li>Ravi 1.2.1</li>
+                                        <li>Ravi 1.2.2</li>
+                                   </ul>
+                              </li>
+                         </ul>
+                    </li>
+         <li>Ravi 2
+              <ul>
+                   <li>Ravi 2.1</li>
+                   <li>Ravi 2.2</li>
+              </ul>
+       </li>
+           <li>Ravi 3</li>
+               </ul>
+
+
+
+
+
+     <h1>06</h1>
+          <h2>Use list-style: none to remove bullets and create a plain list.</h2>
+               <ul class="plain-list">
+                    <li>Ravi 1</li>
+                    <li>Ravi 2</li>
+                    <li>Ravi 3
+               <ul>
+                    <li>Ravi 3.1</li>
+                    <li>Ravi 3.2</li>
+               </ul>
+                    </li>
+                         <li>Ravi 4</li>
+              </ul>
+
+
+
+
+
+     <h1>07</h1>
+          <h2>Position list markers inside the list itens using list-style-position: inside.</h2>
+               <ul class="list-with-inside-markers">
+                    <li>Ravi 1</li>
+                    <li>Ravi 2</li>
+                    <li>Ravi 3
+              <ul>
+                   <li>Ravi 3.1</li>
+                   <li>Ravi 3.2</li>
+              </ul>
+                   </li>
+                    <li>Ravi 4</li>
+              </ul>
+
+
+
+
+
+     <H1>08</H1>
+          <h2>Create a numbered 1ist vith custom colors for the numbers.</h2>
+              <ol class="custom-marker-list">
+                   <li>Ravi 1</li>
+                   <li>Ravi 2</li>
+                   <li>Ravi 3</li>
+                   <li>Ravi 4</li>
+              </ol>
+
+
+
+
+
+     <h1>09</h1>
+          <h2>Experiment with pseudo-elements (::before) to add custon markers.</h2>
+               <div class="multi-column-list">
+                    <ol>
+                         <li class="m-c2">Ravi 1</li>
+                         <li class="m-c2">Ravi 2</li>
+                         <li class="m-c2">Ravi 3</li>
+                         <li class="m-c2">Ravi 4</li>
+                         <li class="m-c2">Ravi 5</li>
+                         <li class="m-c2">Ravi 6</li>
+                         <li class="m-c2">Ravi 7</li>
+                         <li class="m-c2">Ravi 8</li>
+                         <li class="m-c2">Ravi 9</li>
+                         <li class="m-c2">Ravi 10</li>
+                         <li class="m-c2">Ravi 11</li>
+                         <li class="m-c2">Ravi 12</li>
+                   </ol>
+              </div>
+
+
+
+              
+     <h1>10</h1>
+          <h2>Build a multi-column list using column-count and styled markers.</h2>
+               <div class="multi-column">
+                    <ul class="m-c">
+                         <li>Item 1</li>
+                         <li>Item 2</li>
+                         <li>Item 3</li>
+                         <li>Item 4</li>
+                         <li>Item 5</li>
+                         <li>Item 6</li>
+                         <li>Item 7</li>
+                         <li>Item 8</li>
+                         <li>Item 9</li>
+                         <li>Item 10</li>
+                         <li>Item 11</li>
+                         <li>Item 12</li>
+                         <li>Item 13</li>
+                         <li>Item 14</li>
+                         <li>Item 15</li>
+                   </ul>
+              </div>
+              
+              
+
+
+
+       </body>
+</html>

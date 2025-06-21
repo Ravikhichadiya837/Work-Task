@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider By Ravi</title>
+    <style>
+        .my-class {
+            display: none;
+        }
+
+        .disp-block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-data">
+        <div class="slider-image"><img src="./img/output (1).jpg" alt=""></div>
+        <div class="slider-image"><img src="./img/output (2).jpg" alt=""></div>
+        <div class="slider-image"><img src="./img/output (3).jpg" alt=""></div>
+        <div class="slider-image"><img src="./img//output.jpg" alt=""></div>
+    </div>
+
+    <script>
+        let SliderData = document.getElementsByClassName("slider-image");
+        let counter = 0; // Corrected spelling of 'counter'
+
+        function Slider() {
+            // Hide all slider images
+            for (let index = 0; index < SliderData.length; index++) {
+                SliderData[index].classList.remove("disp-block"); // Remove disp-block class to hide
+                SliderData[index].classList.add("my-class");      // Add my-class to ensure it's hidden
+            }
+            
+            // Show the current image based on the counter
+            SliderData[counter].classList.remove("my-class"); // Remove my-class to show current image
+            SliderData[counter].classList.add("disp-block");   // Add disp-block class
+
+            // Increment the counter and reset if it exceeds length
+            counter++;
+            if (counter >= SliderData.length) {
+                counter = 0; // Reset counter to loop the slider
+            }
+
+            // Call the Slider function again after 2 seconds
+            console.log("Done");
+            setTimeout(Slider, 2000);
+        }
+
+        // Start the slider
+        
+       
+        Slider();
+    </script>+  
+</body>
+
+</html>

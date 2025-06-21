@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Layout</title>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .image-container {
+      flex: 1 1 200px;
+      border: 1px solid #000;
+      padding: 10px;
+    }
+    .image-description {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="image-container">
+      <img src="../img/output (1).jpg" alt="Image 1">
+      <div class="image-description">Description 1</div>
+    </div>
+    <div class="image-container">
+      <img src="../img/output (2).jpg" alt="Image 2">
+      <div class="image-description">Description 2</div>
+    </div>
+    <div class="image-container">
+      <img src="../img/output (3).jpg" alt="Image 3">
+      <div class="image-description">Description 3</div>
+    </div>
+  </div>
+</body>
+</html>

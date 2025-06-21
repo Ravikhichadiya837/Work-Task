@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery To-Do List</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .todo-container {
+      max-width: 400px;
+      margin: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px 10px;
+      background: #f0f0f0;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+    li.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .delete-btn {
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="todo-container">
+  <h2>📝 To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter task..." />
+  <button id="addTaskBtn">Add Task</button>
+
+  <ul id="taskList"></ul>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Add Task
+    $('#addTaskBtn').on('click', function () {
+      const taskText = $('#taskInput').val().trim();
+      if (taskText === '') return;
+
+      const taskItem = $('<li></li>').text(taskText);
+
+      // Complete toggle
+      taskItem.on('click', function () {
+        $(this).toggleClass('completed');
+      });
+
+      // Delete button
+      const deleteBtn = $('<button class="delete-btn">X</button>');
+      deleteBtn.on('click', function (e) {
+        e.stopPropagation(); // stop triggering complete toggle
+        $(this).parent().remove();
+      });
+
+      taskItem.append(deleteBtn);
+      $('#taskList').append(taskItem);
+      $('#taskInput').val('');
+    });
+  });
+</script>
+
+</body>
+</html>

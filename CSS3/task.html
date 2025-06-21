@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tsak_D_02</title>
+     <!-- Link to Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    
+    h1{text-align: center;
+    border: #000000 10px dashed;
+background-color: #555555;}
+    h2{border: #000000 5px solid; background-color: #2e6da4;}
+    body{ background-color: #e7ff9a80;}
+
+    
+     .centered-text01 {
+            text-align: center; /*Aligns text to the center */
+        }
+        .underlined-heading02 {
+            text-decoration: underline; /* Underlines the text */
+        }
+        .uppercase-text03 {
+            text-transform: uppercase; /* Transforms text to uppercase */
+        }
+
+        .custom-title04 {
+            letter-spacing: 2px; /* Adds 2px spacing between letters */
+            text-transform: uppercase;/* Transforms text to uppercase for visual effect */
+        } 
+        .custom-spacing05 {
+            word-spacing: 5px; /*  Increases the spacing between words to 5px */
+        }
+        .justified-text06 {
+            text-align: justify; /* Justifies the text */
+            word-spacing: 5px; /* Increases spacing between words for visual comparison */
+            margin: 0 auto; /* Centers the paragraph */
+            max-width: 600px; /* Sets a maximum width for better readability */
+        }
+        .no-underline07 {
+            text-decoration: none; /* Removes the underline from the link */
+        }
+        .justified08 {
+            text-align: justify; /* Justifies the text */
+            margin-bottom: 20px; /* Adds space below for visual separation */
+        }
+
+        .left-aligned08 {
+            text-align: left; /* Aligns text to the left */
+            margin-bottom: 20px; /* Adds space below for visual separation */
+        }
+        .line-through09 {
+            text-decoration: line-through; /* Applies the line-through effect */
+            color: red; /* Optional: changes the color of the struck-through text */
+        }
+        
+        .ravi10 {
+            text-transform: capitalize; /* Capitalizes the first letter of each word */
+            letter-spacing: 2px; /* Adds spacing between letters */
+            color: #2e6da4; /* A nice blue color for the heading */
+            margin-bottom: 20px; /* Adds space below the heading */
+        }
+
+         .p10 {
+            text-transform: uppercase; /* Converts all text to uppercase  */
+           letter-spacing: 1px; /* Slight spacing to improve readability  */
+         color: #555555; /* Gray color for the paragraph text  */
+        line-height: 1.6; /* Increases line height for better readability*/
+        } 
+
+        .custom-text10 {
+            text-transform: lowercase; /* Converts text to lowercase */
+            letter-spacing: 3px; /* Increases letter spacing */
+            font-weight: bold; /* Makes the text bold */
+            color: #d9534f; /* A red color for emphasis */
+        }
+
+
+
+
+
+
+
+        
+        .h01 {
+            font-family: 'Roboto', sans-serif; /* Applies the Roboto font */
+            font-weight: 700; /* Bold weight for the heading */
+            color: #2e6da4; /* Heading color */
+            text-align: center; /* Centers the heading text */
+        }
+
+         .p01{
+            font-family: 'Roboto', sans-serif; /* Applies the Roboto font to paragraphs as well */
+            font-weight: 400; /* Normal weight for body text */
+            color: #555555; /* Gray color for the paragraph text */
+        }
+
+        .h05 {
+            font-size: 3.5rem; /* Initial heading font size */
+            font-weight: bold; /* Heading font weight */
+            color: #2e6da4; /* Heading color */
+            line-height: 0.9; /* Adjusts line height for heading */
+            margin-bottom: 20px; /* Add space below the heading */
+           /*  body {
+            font-size: 16px; Base font size */
+           /* font-family: Arial, sans-serif;  Fallback font */
+            /* max-width: 600px; Sets a maximum width for better readability */
+            /*  margin: 20px auto;Centers the content on the page */
+           /*  line-height: 1.6; Increases line height for better readability 
+        }*/
+          }
+             /* Adjust heading font size on larger screens */
+        @media only screen and (min-width: 1200px) {
+            h1 {
+                font-size: 4.5rem; /* Increase font size on larger screens */
+            }
+        }
+
+        /* Adjust heading font size on smaller screens */
+        @media only screen and (max-width: 500px) {
+            h1 {
+                font-size: 2rem; /* Decrease font size on smaller screens */
+            }
+        }
+                /* Set the font weight of the paragraph to bold */
+        .p03 {
+            font-weight: bold;
+        }
+           /* Apply italic styling to the blockquote */
+           blockquote {
+            font-style: italic;
+            font-size: 1.2em; /* Slightly larger font for emphasis */
+            margin: 20px; /* Add margin around the quote */
+            padding: 10px; /* Add padding inside the quote */
+            border-left: 4px solid #ccc; /* Stylish left border */
+            color: #555; /* Change text color */
+        }
+          /* Base styling for the list */
+          ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0; /* Removes default padding */
+        }
+
+        /* Different line heights for each list item */
+        .line-height-1-5 {
+            line-height: 1.5;
+            font-size: 1.2em; /* Slightly larger font for emphasis */
+        }
+
+        .line-height-2 {
+            line-height: 2;
+            font-size: 1.2em; /* Slightly larger font for consistency */
+        }
+
+        .line-height-5 {
+            line-height: 5;
+            font-size: 1.2em; /* Slightly larger font for consistency */
+        }
+             /* Styling the text with a fallback font stack */
+             .text-block {
+            font-family: "Arial", "Helvetica", sans-serif; /* Fallback font stack */
+            font-size: 1.2em; /* Setting font size */
+            line-height: 1.5; /* Setting line height for readability */
+            color: #333; /* Text color */
+            margin: 20px; /* Margin around the text */
+        }
+             /* Styling the text with a fallback font stack */
+             .text-block {
+            font-family: "Arial", "Helvetica", sans-serif; /* Fallback font stack */
+            font-size: 1.2em; /* Setting font size */
+            line-height: 1.5; /* Setting line height for readability */
+            color: #333; /* Text color */
+            margin: 20px; /* Margin around the text */
+        }
+            /* Styling for the title */
+            .h04 {
+            font-family: 'Georgia', 'Times New Roman', serif; /* Font family */
+            font-size: 2.5em; /* Font size */
+            font-weight: bold; /* Font weight */
+            color: #2c3e50; /* Text color */
+            text-align: center; /* Centering the title */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+          /* Styling for the paragraph */
+          .p08 {
+            font-family: 'Arial', sans-serif; /* Font family */
+            font-size: 4vw; /* Font size using viewport width */
+            line-height: 1.6; /* Setting line height for readability */
+            color: #34495e; /* Text color */
+            margin: 20px; /* Margin around the paragraph */
+        }
+             /* Styling for the blockquote */
+             blockquote {
+            font-style: italic; /* Italic text */
+            line-height: 1.8; /* Increased line height for enhanced readability */
+            color: #555; /* A soft gray color for the text */
+            padding: 15px 20px; /* Padding for the blockquote */
+            margin: 20px 0; /* Margin above and below the blockquote */
+            border-left: 4px solid #ccc; /* Left border style */
+            background-color: #fff; /* White background for blockquote */
+        }
+           /* Styling for the heading */
+           h3 {
+            font-weight: 200; /* Set the font weight to 200 */
+            color: #ff0000; /* Dark gray color for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+            /* Styling for the container div */
+            .container01 {
+            background-color: #87ceeb; /* Set a blue background color */
+            padding: 20px; /* Add some padding inside the container */
+            border: 1px solid #ddd; /* Add a border for visual separation */
+        }
+        
+        /* Styling for the linear gradient section */
+        .linear-gradient {
+            background: linear-gradient(to bottom, #66ccff, #3399ff); /* Linear gradient background */
+            padding: 50px; /* Add some padding inside the section */
+            color: #fff; /* Text color */
+            text-align: center; /* Center text horizontally */
+        }
+
+        /* Styling for the radial gradient section */
+        .radial-gradient {
+            background: radial-gradient(circle, #ffb366, #6633cc ); /* Radial gradient background */
+            padding: 50px; /* Add some padding inside the section */
+            color: #fff; /* Text color */
+            text-align: center; /* Center text horizontally */
+        }
+              /* Styling for the container */
+              .container03 {
+            background-image: url('/RK.jpg'); /* Add your background image URL */
+            background-position: center; /* Center the background image */
+            background-size: cover; /* Cover the entire container */
+            height: 400px; /* Set a fixed height */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: white; /* Text color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a text shadow for better readability */
+        }
+                /* Styling for the container */
+                .container04 {
+            background-image: url('/RK.jpg'); /* Add your background image URL */
+          
+            background-size: cover; /* Cover the entire container */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            height: 400px; /* Set a fixed height */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: white; /* Text color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a text shadow for better readability */
+        }
+             /* Hero Section Styles */
+             .hero-section05 {
+            height: 100vh; /* Full-screen height: 100vmin or 100vmax could also be used for mobile devices */
+            display: flex; /* Enable flexbox for centering content */
+            justify-content: center;
+            align-items: center;
+            background-image: url('/RK.jpg'); /* Add your background image URL */
+            background-position: center; /* Center the background image */
+            background-size: cover; /* Cover the full-screen with the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            color: white; /* Set the text color to white for better readability */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a text shadow for better readability against the background */
+        }
+        .multi-background06 {
+            height: 500px; /* Fixed height for the element */
+            background-image: url('/RK.jpg'), /* First background image */
+                              url('/output\ \(1\).jpg'); /* Second background image */
+            background-position: top left, bottom right; /* Position first image at top left, second at bottom right */
+            background-size: 50%, auto; /* Size the first image to 50% width, let the second image maintain its size */
+            background-repeat: no-repeat; /* Prevent images from repeating */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: white; /* Text color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow */
+            text-align: center; /* Center text */
+        }
+        .parallax07 {
+            /* Parallax Section */
+            height: 100vh; /* Full viewport height */
+            background-image: url('/RK.jpg'); /* Replace with your image URL */
+            background-attachment: fixed; /* Fixed background for parallax effect */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            background-size: cover; /* Cover the entire section */
+        }
+
+        .content07 {
+            /* Content Section */
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+            text-align: center; /* Center text */
+            padding: 20px; /* Add some padding */
+        }
+
+        h6, p {
+            margin: 0; /* Remove default margin for heading and paragraph */
+        }
+        .background-rgba {
+            /* Semi-transparent background with rgba */
+            background-color: rgba(0, 128, 255, 0.5); /* Blue with 50% opacity */
+            height: 200px; /* Fixed height for demonstration */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: white; /* Text color */
+        }
+
+        .background-hsla {
+            /* Semi-transparent background with hsla */
+            background-color: hsla(210, 100%, 50%, 0.7); /* Blue with 70% opacity */
+            height: 200px; /* Fixed height for demonstration */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: white; /* Text color */
+        }
+
+        .overlay-rgba {
+            /* Overlay with rgba background */
+           /* position: absolute;  Position absolutely for overlay effect */
+            top: 0; /* Start from the top */
+            left: 0; /* Start from the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity for overlay */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+        }
+        .gradient-image-background09 {
+            /* Combining Gradient and Image Background */
+            height: 100vh; /* Take full viewport height */
+            background-image: linear-gradient(to bottom, rgb(255, 128, 0), rgb(44, 174, 0)), url('/output\ \(1\).jpg'); /* Gradient over image */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+            background-size: cover; /* Cover the entire section with the image */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: white; /* Text color */
+        }
+
+        .overlay09 {
+            /* Simple Overlay for Contrast */
+          /*  position: absolute;  Position absolutely for overlay effect */
+            top: 0; /* Start from the top */
+            left: 0; /* Start from the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgb(51, 0, 255); /* Black with 30% opacity for overlay */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+        }
+        .shorthand-background10 {
+            /* Using Shorthand Background Property */
+            background: #f0f0f0 url('/RK.jpg') no-repeat center fixed;
+            height: 100vh; /* Take full viewport height */
+            display: flex; /* Use flexbox for centering content */
+            align-items: center; /* Vertically center the content */
+            justify-content: center; /* Horizontally center the content */
+            color: black; /* Text color */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Text Properties</h1>
+    <br><br>
+    <h2>>01 Create a paragraph and align it to the center using text-align.</h2>
+    <p class="centered-text01">This is a centered paragraph. By using the text-align property in CSS, we can easily align our text in the center of the page, making it visually appealing and easier to read.</p>
+
+    <h2>>02 Underline a heading using text-decoration.</h2>
+    <h4 class="underlined-heading02">This is an Underlined Heading</h4>
+
+    <h2>> 03 Transform a sentence to uppercase using text-transform</h2>
+    <p class="uppercase-text03">This sentence will be transformed to uppercase.</p>
+
+    <h2>> 04 Add extra spacing between letters in a title using letter-spacing: 2px</h2>
+    <h4 class="custom-title04">Custom Title with Extra Spacing</h4>
+
+    <h2>>05 Increase the spacing between words in a paragraph using word-spacing: 5px.</h2>
+    <p class="custom-spacing05">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <h2>> 06 Justify the text of a paragraph and observe the difference</h2>
+    <p class="justified-text06">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h2>> 07 Create a link and remove its underline using text-decoration: none</h2>
+    <p>Ravi khichadiya <a href="https://github.com/r-k-837" class="no-underline07">github</a> for more information.</p>
+
+    <h2>> 08 Style a block of text with text-align: justify and compare it to left-aligned text</h2>
+    <p class="justified08">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="left-aligned08">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    
+    <h2>> 09 Add a line-through effect to a sentence using text-decoration: line-through</h2>
+    <p>This is a regular sentence.</p>
+    <p>This is a sentence with a <span class="line-through09">line-through effect</span> applied to it.</p>
+    <p>The original price was <span class="line-through09">Rs.50</span>, now it is Rs.30.</p>
+
+    <h2>> 10 Experiment with multiple text properties (e.g., text-transform: capitalize + letter-spacing)</h2>
+    <ravi10>Text Properties Experiment</ravi10>
+    <p class="p10">This paragraph uses <strong>uppercase</strong> transformation and letter spacing.</p>
+    <p class="custom-text10 p10">this is a bold lowercase text with letter spacing.</p>
+    <p class="p10">Here is another paragraph that continues the experimentation with text styles.</p>
+    <br><br>
+
+
+    <h1>Font Properties </h1>
+    <br><br>
+
+    <h2>> 01 Apply the font-family property to a heading using a Google Font (e.g., "Roboto")</h2>
+    <h3 class="h01">Welcome to My Website</h3>
+    <p class="p01">This website is using the "Roboto" font from Google Fonts for the heading and paragraph text.</p>
+    <p class="p01">Roboto is a modern and versatile typeface that enhances the overall readability of the text.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, quibusdam.</p>
+
+    <h2>> 02 Use font-size to create a responsive heading that adjusts its size using em or rem units.</h2>
+    <h5 class="h05">Welcome to My Responsive Website</h5>
+
+    <h2>> 03 Use font-size to create a responsive heading that adjusts its size using em or rem units.</h2>
+    <p class="p03">This paragraph will be displayed in bold font.</p>
+
+    <h2>> 04 Apply italic styling to a quote using font-style: italic.</h2>
+    <blockquote>
+      04  "The only limit to our realization of tomorrow is our doubts of today." — Ravi l. khichadiya</blockquote>
+
+    <h2>> 05 Create a list of text with different line heights (line-height: 1.5, 2, etc.)</h2>
+    <ul>
+        <li class="line-height-1-5">This is a list item with a line height of 1.5.</li>
+        <li class="line-height-2">This is a list item with a line height of 2.</li>
+        <li class="line-height-5">This is a list item with a line height of 5.</li>
+    </ul>
+
+    <h2>> 06 Use a fallback font stack (e.g., "Arial, Helvetica, sans-serif") for a block of text</h2>
+    <div class="text-block">This is a block of text demonstrating the use of a fallback font stack. If the primary font ("Arial") is not available on the user's system, the browser will try "Helvetica". If that is also unavailable, it will default to any available sans-serif font. Using a fallback font stack ensures that text remains readable, regardless of the fonts installed on the user’s device.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nam blanditiis beatae maxime vitae, aliquid adipisci illum mollitia velit repudiandae.</div>
+
+    <h2>> 07 Style a title with a combination of font-family, font-size, and font-weight.</h2>
+    <h4 class="h04">Welcome to My Styled Page</h4>
+
+    <h2>> 08 Adjust the font size of a paragraph using vw (viewport width) for responsive design</h2>
+    <p class="p08">
+        This paragraph demonstrates how to use viewport width (vw) units to create a responsive font size. 
+        As the browser window resizes, the text will scale proportionately, ensuring optimal readability 
+        across different devices from mobile to desktop. Adjust the size of your browser window to see 
+        the effect in action!
+    </p>
+
+    <h2>> 09 Create a blockquote and style it with italic text and increased line height.</h2>
+    <p>
+        Below is an example of a styled blockquote. The text within it is displayed in italics with increased line height for better readability.
+    </p>
+    <blockquote>
+        "In the middle of every difficulty lies opportunity." — Albert Einstein
+    </blockquote>
+    <p>
+        By using CSS, we can enhance the appearance of blockquotes to make them stand out and effectively convey important information.
+    </p>
+
+    <h2>> 10 Set a custom font weight (e.g., font-weight: 200) for a heading.</h2>
+    <h3>This is a Heading with Custom Font Weight</h3>
+    <p>
+        This paragraph provides a brief overview of the heading above. By adjusting the font weight, we can change how bold the text appears, allowing for different visual hierarchies in your design.
+    </p>
+    <br><br>
+
+
+    <h1>Background Properties</h1>
+    <br><br>
+
+    <h2>> 01 Apply a solid background color to a &lt;div> element</h2>
+    <div class="container01">
+        <p>This paragraph has a blue background due to the class applied to the container div.</p>
+    </div>
+
+    <h2>> 02 Use a gradient (e.g., linear or radial) as the background of a section</h2>
+    <section class="linear-gradient">
+        <h4>Linear Gradient</h4>
+        <p>This section has a linear gradient background, transitioning from a light blue at the top to a darker blue at the bottom.</p>
+    </section>
+
+    <section class="radial-gradient">
+        <h4>Radial Gradient</h4>
+        <p>This section has a radial gradient background, transitioning from pink at the center to purple towards the edges.</p>
+    </section>
+
+    <h2>> 03 Add a background image to a container and position it using background-position: center</h2>
+    <div class="container03">
+        <h5>Welcome to My Website</h5>
+    </div>
+
+    <h2>> 04 Use background-repeat: no-repeat to prevent an image from repeating.</h2>
+    <div class="container04">
+        <h6>Welcome to My Website</h6>
+    </div>
+
+    <h2>> 05 Create a full-screen hero section using background-size: cover.</h2>
+    <section class="hero-section05">
+        <h5>Full-Screen Hero Section</h5>
+        <p>Welcome to our website! Explore our services and learn more about what we have to offer.</p>
+        <button><a href="#">Learn More</a></button>
+    </section>
+
+    <h2>> 06 Apply multiple background images to an element and position them differently.</h2>
+    <div class="multi-background06">
+        <h5>Multiple Background Images</h5>
+        <p>This section demonstrates the use of multiple background images with different positions.</p>
+    </div>
+
+    <h2>> 07 Experiment with background-attachment: fixed to create a parallax effect. </h2>
+    <div class="parallax07"></div> <!-- Parallax Section -->
+    <div class="content07">
+        <h6>Welcome to Our Site</h6>
+        <p>This is a sample text over the image for the parallax effect.</p>
+    </div>
+    <div class="parallax07"></div> <!-- Another Parallax Section -->
+    <div class="content07">
+        <h6>Explore More</h6>
+        <p>Scroll down to see more content and another parallax section!</p>
+    </div>
+    <div class="parallax07"></div> <!-- Another Parallax Section -->
+    <div class="content07">
+        <h6>Thank You for Visiting</h6>
+        <p>We hope you enjoy our website!</p>
+    </div> 
+
+ 
+    <h2>> 08 Use a semi-transparent background color with rgba or hsla values.</h2>
+    <div class="background-rgba">
+        <h6>RGBA Background</h6>
+        <p>This background uses rgba(0, 128, 255, 0.5) for a semi-transparent effect.</p>
+    </div>
+
+    <div class="background-hsla">
+        <h6>HSLA Background</h6>
+        <p>This background uses hsla(210, 100%, 50%, 0.7) for a semi-transparent effect.</p>
+        <div class="overlay-rgba">
+            <h6>Overlay with RGBA</h6>
+            <p>This overlay uses rgba(255, 255, 255, 0.3) to add an extra layer of transparency.</p>
+        </div>
+    </div>
+
+ 
+    <h2>> 09 Combine a gradient background with a background image for a unique design </h2>
+    <div class="gradient-image-background09">
+        <div class="overlay09">
+            <h6>Combined Gradient and Image Background</h6>
+            <p>This design combines a linear gradient with a background image for a unique visual effect.</p>
+        </div>
+    </div>
+
+    <h2>> 10 Use shorthand background property to define all background styles in a single rule. </h2>
+    <div class="shorthand-background10">
+        <h6>Shorthand Background Property</h6>
+        <p>This example uses the shorthand background property to set the background color, image, and other styles in a single rule.</p>
+    </div>
+
+
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Form Layout</title>
+  <style>
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+    .form-row label {
+      flex: 1;
+    }
+    .form-row input {
+      flex: 2;
+    }
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-row">
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+    </div>
+    <div class="form-row">
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+    </div>
+    <div class="form-row">
+      <label for="message">Message:</label>
+      <textarea id="message"></textarea>
+    </div>
+  </div>
+</body>
+</html>

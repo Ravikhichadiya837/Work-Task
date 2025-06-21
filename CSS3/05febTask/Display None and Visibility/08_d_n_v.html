@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 08</title>
+    <style>
+        .tooltip {
+            display: none;
+            position: absolute;
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .hover-text:hover + .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p class="hover-text">Hover over me!</p>
+    <div class="tooltip">This is a tooltip message.</div>
+</body>
+</html>

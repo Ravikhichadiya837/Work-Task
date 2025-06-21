@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="clr">
+    <div class="container">
+        <!-- file:///C:/xampp/htdocs/UI_UX/07Oct_Troopy_5PM/JS/20DynamicValidationFunction.html?
+        fname=data&
+        mname=data&
+        lname=test&
+        dob=78&
+        email=&
+        btn-register=Register -->
+        <form action="" onsubmit="event.preventDefault(); validateForm()" method="get">
+
+            <div class="row">
+                <div class="col"><h3>Student Information</h3></div>
+            </div>
+            <div class="row">
+                <div class="col"><input type="text" onblur="checkValidate(this,'fname_error')" placeholder="First Name" name="fname" id="fname"><span id="fname_error">*</span> </div>
+                <div class="col"><input type="text" placeholder="Middle Name" name="mname" id="mname"></div>
+                <div class="col"><input type="text" onblur="checkValidate(this,'lname_error')" placeholder="Last Name" name="lname" id="lname"><span id="lname_error">*</span> </div>
+            </div>
+            <div class="row">
+                <div class="col"><input type="datetime-local" placeholder="DOB" onblur="checkValidate(this,'dob_error')" name="dob" id="dob"><span id="dob_error">*</span></div>
+                <div class="col">
+                    <input type="text" placeholder="StudentID" disabled name="stdId" id="stdId">
+                    <!-- <input type="text" placeholder="xxx@xxxx.com" value="something@mail.com" readonly name="email" id="email"> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><h3>Contact Info</h3></div>
+            </div>
+            <div class="row">
+                <div class="col"><input type="tel" placeholder="Mobile Number" name="mobile" onblur="checkValidate(this,'mob_error')" id="mobile"><span id="mob_error">*</span></div>
+                <div class="col">
+                    <!-- <input type="email" placeholder="Enter Your Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"  name="email" onkeydown="checkEmailValid(this)" onblur="checkValidate(this,'email_error')" id="email"><span id="email_error">*</span> -->
+                    <!-- <input type="email" placeholder="Enter Your Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"  name="email" onkeypress="checkEmailValid(this)" onblur="checkValidate(this,'email_error')" id="email"><span id="email_error">*</span> -->
+                    <input type="email" placeholder="Enter Your Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"  name="email" onkeyup="checkEmailValid(this)" onblur="checkValidate(this,'email_error')" id="email"><span id="email_error">*</span>
+                    <!-- <input type="text" placeholder="xxx@xxxx.com" value="something@mail.com" readonly name="email" id="email"> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><input type="submit" value="Register" name="btn-register" id="btn-register"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function checkEmailValid(e) {
+            console.log(e.value);
+            var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+            // var pattern = /^[a-z]$/; 
+            // var pattern = /^[a-zA-Z]+$/; 
+            // var pattern = /^[0-9]+$/; 
+            // /^[0-9]*$/
+            if (pattern.test(e.value)) {
+                // console.log("inside if");
+                document.getElementById("email_error").innerHTML=""
+            }else{
+                document.getElementById("email_error").innerHTML="Invalid Email"
+                // console.log("inside else");
+            }
+
+        }
+        function validateForm() {
+            console.log("called");
+        }
+        function checkValidate(anything,spnid) {
+            // console.log(anything.value);
+            if (anything.value == "") {
+                document.getElementById(spnid).innerHTML="This field is required!"
+            } else {
+                document.getElementById(spnid).innerHTML=""
+            }
+        }
+    </script>
+</body>
+</html>

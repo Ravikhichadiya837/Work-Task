@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+    <h1>12. Check if all elements in `[2, 4, 6, 8]` are even numbers.</h1>
+    <h2>7/March/2025</h2>
+    
+    <script>
+                  let numbers = [2, 4, 6, 8];
+          let allEven = true;
+          
+          for (let i = 0; i < numbers.length; i++) {
+              if (numbers[i] % 2 !== 0) { 
+                  allEven = false;
+                  break;
+              }
+          }
+          
+          console.log(allEven);
+          
+    </script>
+</body>
+</html>

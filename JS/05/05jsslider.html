@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .m-s{
+            display: inline-block block;
+            align-items: center;
+        }
+        .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transition: 0.6s ease;
+        user-select: none;
+      }
+
+      .next {
+        right: 0;
+      }
+      /* .s-c {
+        max-width: 300px;
+        position: relative;
+        margin: auto;
+      } */
+
+      .fade {
+        /* animation-name: fade; */
+        animation-duration: .5s;
+      }
+      
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+
+
+</head>
+<body>
+   
+    <div class="">
+        <div class="m-s fade"><img  src="../05/img/download 01.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/download 02.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/download 03.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/download 04.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/download 05.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/download 06.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/images 07.png" alt=""></div>
+        <div class="m-s fade"><img  src="../05/img/images 08.png" alt=""></div>
+
+        <a class="prev" onclick="plusSlides(-1)"><img src="../05/img/lestb.png" alt="">  </a>
+        <a class="next" onclick="plusSlides(1)"> <img src="../05/img/rightb.png"alt="">   </a>
+    </div>
+
+
+
+
+    <script>
+            let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+    </script>
+</body>
+</html>
