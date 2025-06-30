@@ -80,6 +80,7 @@ h4.number {
   top: 30px;
   opacity: .09;
   transition: 0.3s ease-in-out;
+  color: #fff;
 }
 
 .sec-four h3 {

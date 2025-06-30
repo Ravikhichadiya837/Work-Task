@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Dropdown + Checkbox View Switch</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .checkbox-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .checkbox-group label {
+      background: #222;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    .checkbox-group label:hover {
+      border-color: #0f0;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      transform: scale(1.4);
+      accent-color: #0f0;
+      cursor: pointer;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 8px;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+      height: 100vh;
+      padding: 40px;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .active-section {
+      display: block;
+    }
+
+    #home { background: linear-gradient(135deg, #1f4037, #99f2c8); }
+    #about { background: linear-gradient(135deg, #4b6cb7, #182848); }
+    #contact { background: linear-gradient(135deg, #dd3e54, #6be585); }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 600px;
+    }
+
+    /* Responsive controls section */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .controls {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-title">✨ UniSwitcher</div>
+    <div class="controls">
+      <!-- Checkbox Section -->
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="section" onchange="selectSection(this, 'home')"> 🏠 Home</label>
+        <label><input type="checkbox" name="section" onchange="selectSection(this, 'about')"> 📘 About</label>
+        <label><input type="checkbox" name="section" onchange="selectSection(this, 'contact')"> 📞 Contact</label>
+      </div>
+
+      <!-- Dropdown Section -->
+      <div class="dropdown">
+        <button class="dropbtn">Select Page ▼</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="showSection('home')">🏠 Home</a>
+          <a href="#" onclick="showSection('about')">📘 About</a>
+          <a href="#" onclick="showSection('contact')">📞 Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <div id="home" class="section active-section">
+    <h1>🏠 Welcome Home</h1>
+    <p>This is your cozy digital space. Feel free to look around!</p>
+  </div>
+
+  <div id="about" class="section">
+    <h1>📘 About Us</h1>
+    <p>We are the creators of digital experiences that look and feel magical.</p>
+  </div>
+
+  <div id="contact" class="section">
+    <h1>📞 Contact Us</h1>
+    <p>Need help or want to say hello? Drop us a message anytime!</p>
+  </div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    function showSection(id) {
+      // Remove active-section from all
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active-section'));
+      document.getElementById(id).classList.add('active-section');
+
+      // Uncheck all checkboxes
+      document.querySelectorAll('.checkbox-group input[type="checkbox"]').forEach(cb => cb.checked = false);
+    }
+
+    function selectSection(checkbox, id) {
+      // Uncheck other checkboxes
+      document.querySelectorAll('.checkbox-group input[type="checkbox"]').forEach(cb => {
+        if (cb !== checkbox) cb.checked = false;
+      });
+
+      // Show only if this is checked
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active-section'));
+      if (checkbox.checked) {
+        document.getElementById(id).classList.add('active-section');
+      }
+    }
+  </script>
+
+</body>
+</html>

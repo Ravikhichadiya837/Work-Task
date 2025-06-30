@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkbox Format Selector</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 20px;
+      background-color: #111;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 1px solid #333;
+    }
+
+    .format-options {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .format-item {
+      background: #222;
+      padding: 20px 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .format-item:hover {
+      border-color: #0f0;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      margin-right: 10px;
+    }
+
+    /* Center screen animation */
+    .screen-display {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      font-weight: bold;
+      opacity: 0;
+      padding: 40px 60px;
+      border-radius: 20px;
+      border: 2px solid white;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      transition: 0.4s ease;
+    }
+
+    .screen-display.show {
+      opacity: 1;
+      animation: pop 0.8s ease-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.3) translate(-50%, -50%); opacity: 0; }
+      50% { transform: scale(1.2) translate(-50%, -50%); opacity: 1; }
+      100% { transform: scale(1) translate(-50%, -50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎬 Choose Your Theater Experience</header>
+
+  <div class="format-options">
+    <label class="format-item">
+      <input type="checkbox" onchange="showFormat(this, '🎞️ 2D Format Selected')">
+      2Db  
+    </label>
+    <label class="format-item">
+      <input type="checkbox" onchange="showFormat(this, '🕶️ 3D Format Selected')">
+      3D
+    </label>
+    <label class="format-item">
+      <input type="checkbox" onchange="showFormat(this, '🔊 Dolby Atmos Enabled')">
+      Dolby
+    </label>
+  </div>
+
+  <div id="screenDisplay" class="screen-display"></div>
+
+  <script>
+    function showFormat(checkbox, text) {
+      if (checkbox.checked) {
+        const screen = document.getElementById('screenDisplay');
+        screen.innerText = text;
+        screen.classList.add('show');
+
+        // Hide after 3 seconds
+        setTimeout(() => {
+          screen.classList.remove('show');
+        }, 3000);
+      }
+    }
+  </script>
+
+</body>
+</html>
