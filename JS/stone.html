@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #75d275;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn-group button {
+      background: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .btn-group button:hover {
+      background-color: #45a049;
+    }
+
+    .score-board {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="btn-group">
+      <button onclick="play('Rock')">Rock</button>
+      <button onclick="play('Paper')">Paper</button>
+      <button onclick="play('Scissors')">Scissors</button>
+    </div>
+    <div class="score-board">
+      <p id="round">Round: 1 of 5</p>
+      <p id="player-score">Player Score: 0</p>
+      <p id="computer-score">Computer Score: 0</p>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    let playerScore = 0;
+    let computerScore = 0;
+    let round = 1;
+
+    function play(playerChoice) {
+      if (round > 5) return;
+
+      const choices = ['Rock', 'Paper', 'Scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      let result = '';
+
+      if (playerChoice === computerChoice) {
+        result = "It's a draw!";
+      } else if (
+        (playerChoice === 'Rock' && computerChoice === 'Scissors') ||
+        (playerChoice === 'Paper' && computerChoice === 'Rock') ||
+        (playerChoice === 'Scissors' && computerChoice === 'Paper')
+      ) {
+        result = "You win this round!";
+        playerScore++;
+      } else {
+        result = "Computer wins this round!";
+        computerScore++;
+      }
+
+      document.getElementById('round').textContent = `Round: ${round} of 5`;
+      document.getElementById('player-score').textContent = `Player Score: ${playerScore}`;
+      document.getElementById('computer-score').textContent = `Computer Score: ${computerScore}`;
+      document.getElementById('result').textContent = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
+
+      round++;
+
+      if (round > 5) {
+        setTimeout(() => {
+          const finalMessage = playerScore > computerScore
+            ? "🎉 You won the game!"
+            : playerScore < computerScore
+              ? "💻 Computer won the game!"
+              : "🤝 It's a tie!";
+          alert(finalMessage);
+        }, 100);
+      }
+    }
+  </script>
+</body>
+</html>

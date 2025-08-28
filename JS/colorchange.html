@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Background Changer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      transition: background-color 0.5s ease;
+      background-color: #f0f0f0;
+    }
+
+    .box {
+      width: 300px;
+      height: 150px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+      transition: 0.3s ease;
+    }
+
+    .change-btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #bcbcbcd9;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .change-btn:hover {
+      background-color: #828181;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="colorCodeBox">#FFFFFF</div>
+
+  <button class="change-btn" onclick="changeBackground()">Change Color</button>
+
+  <script>
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#F3FF33', '#33FFF0', '#FFFFFF'];
+    let index = 0;
+
+    function changeBackground() {
+      index = (index + 1) % colors.length;
+      const selectedColor = colors[index];
+
+      // Set body background
+      document.body.style.backgroundColor = selectedColor;
+
+      // Update box content with color code
+      document.getElementById("colorCodeBox").textContent = selectedColor;
+    }
+  </script>
+
+</body>
+</html>

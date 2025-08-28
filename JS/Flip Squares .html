@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flip Squares Outward</title>
+<style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #fff;
+}
+
+.main {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.9s ease;
+  transform-origin: center;
+}
+
+/* Positions and origins */
+.top-left {
+  top: 0;
+  left: 0;
+  background-color: #d83b01;
+  transform-origin: top left;
+}
+
+.top-right {
+  top: 0;
+  left: 100px;
+  background-color: #107c10;
+  color: black;
+  transform-origin: top right;
+}
+
+.bottom-left {
+  top: 100px;
+  left: 0;
+  background-color: #0078d7;
+  transform-origin: bottom left;
+}
+
+.bottom-right {
+  top: 100px;
+  left: 100px;
+  background-color:#ffb900;
+  transform-origin: bottom right;
+}
+
+
+.main:hover .top-left {
+  transform: rotate(180deg);
+}
+
+.main:hover .top-right {
+  transform: rotate(-180deg);
+}
+
+.main:hover .bottom-left {
+  transform: rotate(-180deg);
+}
+
+.main:hover .bottom-right {
+  transform: rotate(180deg);
+}
+.text{
+    position: absolute;
+    z-index: -1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="main">
+  <div class="square top-left"></div>
+  <div class="square top-right"></div>
+  <div class="square bottom-left"></div>
+  <div class="square bottom-right"></div>
+</div>
+
+
+</body>
+</html>
