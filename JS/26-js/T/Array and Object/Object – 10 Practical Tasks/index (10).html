@@ -13,17 +13,15 @@
     <script>
 
 
-        let employees = [
-            { name: "Ravi", salary: 50000 },
-            { name: "Amit", salary: 60000 },
-            { name: "Priya", salary: 75000 }
+
+        const employees = [
+            { name: "Ravi", salary: 20000 },
+            { name: "Amit", salary: 30000 },
+            { name: "Neha", salary: 25000 }
         ];
+        const maxSalary = employees.reduce((a, b) => a.salary > b.salary ? a : b);
+        console.log("Max Salary:", maxSalary);
 
-        let maxSalaryEmp = employees.reduce((prev, current) =>
-            (prev.salary > current.salary ? prev : current)
-        );
-
-        console.log(maxSalaryEmp);
 
 
 

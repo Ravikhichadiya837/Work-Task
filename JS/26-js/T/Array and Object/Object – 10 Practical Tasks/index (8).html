@@ -13,15 +13,13 @@
     <script>
 
 
-        let students = [
-            { name: "Ravi", marks: 85 },
+        const students = [
+            { name: "Ravi", marks: 90 },
             { name: "Amit", marks: 75 },
-            { name: "Priya", marks: 90 }
+            { name: "Neha", marks: 85 }
         ];
-
-        let topStudents = students.filter(s => s.marks > 80);
-
-        console.log(topStudents);
+        const toppers = students.filter(s => s.marks > 80);
+        console.log("Toppers:", toppers);
 
 
 

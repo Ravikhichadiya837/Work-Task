@@ -11,15 +11,16 @@
 
     <h1></h1>
     <script>
-        let students = [
+
+
+
+        const students = [
             { name: "Ravi", age: 22 },
-            { name: "Amit", age: 20 },
-            { name: "Priya", age: 21 }
+            { name: "Amit", age: 19 },
+            { name: "Neha", age: 21 }
         ];
-
-        students.sort((a, b) => a.age - b.age);
-
-        console.log(students);
+        const sorted = students.sort((a, b) => a.age - b.age);
+        console.log("Sorted by age:", sorted);
 
 
 

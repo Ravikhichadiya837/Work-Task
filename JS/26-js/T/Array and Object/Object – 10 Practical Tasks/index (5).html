@@ -13,14 +13,9 @@
     <script>
 
 
-        let student = { name: "Ravi", age: 20, marks: 85 };
-
-        function hasProperty(obj, prop) {
-            return obj.hasOwnProperty(prop);
-        }
-
-        console.log(hasProperty(student, "age"));
-        console.log(hasProperty(student, "address"));
+        
+        const student = { name: "Ravi", age: 20 };
+        console.log("Has age:", "age" in student);
 
 
 
