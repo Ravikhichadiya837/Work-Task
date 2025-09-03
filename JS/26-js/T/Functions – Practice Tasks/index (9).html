@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Write a function that prints the Fibonacci series up to n terms</h1>
+
+
+    <script>
+        function fibonacci(n) {
+            let a = 0, b = 1;
+            for (let i = 0; i < n; i++) {
+                console.log(a);
+                let next = a + b;
+                a = b;
+                b = next;
+            }
+        }
+
+        fibonacci(7);  // 0 1 1 2 3 5 8
+
+    </script>
+
+
+</body>
+
+</html>

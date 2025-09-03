@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Write a function that takes a string and checks if it is a palindrome or not.</h1>
+
+
+    <script>
+        function isPalindrome(str) {
+            let reversed = str.split("").reverse().join("");
+            return str === reversed;
+        }
+
+        console.log(isPalindrome("madam"));  // true
+
+    </script>
+
+
+</body>
+
+</html>
