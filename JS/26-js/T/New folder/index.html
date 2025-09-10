@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #box {
+      width: 250px;
+      height: 250px;
+      background-color: lightgray;
+      margin: 20px auto;
+      border: 2px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    #log {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      min-height: 50px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mouse Events Demo</h1>
+  <div id="box">Hover / Click Me</div>
+  <div id="log">Event Log:</div>
+
+  <script>
+    const box = document.getElementById("box");
+    const log = document.getElementById("log");
+
+    function showLog(eventName) {
+      log.innerHTML = "Event: " + eventName;
+    }
+
+    box.onclick = () => showLog("onclick - Single Click");
+    box.ondblclick = () => showLog("ondblclick - Double Click");
+    box.onmousedown = () => showLog("onmousedown - Mouse Button Pressed");
+    box.onmouseup = () => showLog("onmouseup - Mouse Button Released");
+    box.onmouseenter = () => showLog("onmouseenter - Mouse Entered");
+    box.onmouseleave = () => showLog("onmouseleave - Mouse Left");
+    box.onmousemove = () => showLog("onmousemove - Mouse Moving Inside");
+    box.onmouseover = () => showLog("onmouseover - Mouse Over Element");
+    box.onmouseout = () => showLog("onmouseout - Mouse Moved Out");
+  </script>
+</body>
+</html>
