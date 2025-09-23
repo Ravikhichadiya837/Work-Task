@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      
+   
+        .container {
+            display: flex;
+            max-width: 935px;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+
+     
+        
+        .login-container {
+            flex-basis: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .login-box {
+            background: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            padding: 30px 40px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .logo h1 {
+            font-family: 'Grand Hotel', cursive;
+            font-size: 3.5rem;
+            font-weight: normal;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        input {
+            padding: 9px 8px;
+            margin-bottom: 6px;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        
+        button {
+            background: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 7px;
+            margin: 8px 0;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 18px 0;
+            color: #8e8e8e;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+     
+        .divider{
+         
+            text-align: center;
+        
+        }
+        
+        .fb-login {
+            color: #385185;
+            font-weight: 600;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        
+        .fb-login i {
+            margin-right: 6px;
+            font-size: 18px;
+        }
+        
+        .forgot-pw {
+            color: #00376b;
+            font-size: 12px;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+        
+        .signup-box {
+            background: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            padding: 25px;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+        }
+        
+        .signup-box a {
+            color: #0095f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    
+     
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+        
+        <div class="login-container">
+            <div class="login-box">
+                <div class="logo">
+                    <h1>Instagram</h1>
+                </div>
+                
+                <form id="login-form">
+
+                    <input type="text" name="uname"  placeholder="Phone number, username or email" id="uname" onblur="validateUserName()" />
+
+                   <input type="text" name="upass" placeholder="Password" id="upass" onblur="validateUserPass()"/>
+
+                 
+
+                    <button type="submit" >Log in</button>
+                </form>
+                
+                <div class="divider">OR</div>
+                
+                <div class="fb-login">
+                    <i class="fab fa-facebook-square"></i> Log in with Facebook
+                </div>
+                
+                <div class="forgot-pw" >Forgotten your password?</div>
+            </div>
+            
+            <div class="signup-box">
+                Don't have an account? <a href="#">Sign up</a>
+            </div>
+            
+          
+        </div>
+    </div>
+
+    <script>
+       
+
+      let uname = document.getElementById("uname");
+      let upass = document.getElementById("upass");
+       
+
+ function validateUserName() {
+        if (uname.value == "") {
+          console.log("User Name is Required");
+        } else {
+          console.log(uname.value);
+        }
+      }
+      function validateUserPass() {
+        if (upass.value == "") {
+          console.log("User Password is Required");
+        } else {
+          console.log(upass.value);
+        }
+      }
+
+
+    </script>
+</body>
+</html>

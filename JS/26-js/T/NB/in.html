@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"   />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .col-50 {
+            width: 50%;
+        }
+
+        .col-25 {
+            width: 25%;
+        }
+
+        .col-33 {
+            width: 33.33%;
+        }
+
+        .col-40 {
+            width: 40%;
+        }
+
+        .col-70 {
+            width: 70%;
+        }
+
+        .header {
+            background-color: rgb(0, 0, 0);
+        }
+
+        li {
+            list-style-type: none;
+            padding: 10px 30px;
+        }
+
+        a {
+            color: aliceblue;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        input {
+            background-color: black;
+            padding: 8px;
+            padding-left: 2.625rem;
+            border-radius: 4px !important;
+            font-weight: 400;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        .logo {
+            padding: 10px;
+            width: 90px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        svg {
+            width: 100%;
+        }
+
+        #section-1 {
+            background-image: url(https://via.placeholder.com/1920x1080);
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            min-height: 500px;
+        }
+
+        .wrapper {
+            padding: 100px;
+        }
+
+        .bk-content {
+            padding: 200px 0px 123px 200px;
+        }
+
+        h1 {
+            font-size: 40px;
+            padding: 100px 0px 10px 0px;
+            color: white;
+        }
+
+        .secp1 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .btn-1 {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: red;
+            color: aliceblue;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn12 {
+            border: none;
+            border-radius: 3%;
+            background-color: red;
+            height: 40px;
+            width: 150px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card {
+            width: 90%;
+            font-size: 15px;
+            padding: 20px;
+        }
+
+        .card1 {
+            width: 100%;
+            font-size: 15px;
+        }
+
+        .atext {
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        .roow {
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            gap: 20px;
+            padding: 20px 20px;
+            background-color: rgb(75, 75, 75);
+            align-items: center;
+            color: white;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .navitem {
+            display: flex;
+            align-items: center;
+        }
+
+        .div2 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .bk-content {
+                padding: 150px 0px 100px 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .col-25, .col-33, .col-40, .col-50, .col-70 {
+                width: 50%;
+            }
+            
+            .bk-content {
+                padding: 100px 0px 80px 50px;
+            }
+            
+            h1 {
+                font-size: 32px;
+                padding: 50px 0px 10px 0px;
+            }
+            
+            .secp1 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .col-25, .col-33, .col-40, .col-50, .col-70 {
+                width: 100%;
+            }
+            
+            .hamburger {
+                display: block;
+                z-index: 100;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: black;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.3s ease;
+                z-index: 99;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .navitem {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .div2 {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+            
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .bk-content {
+                padding: 80px 20px;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 28px;
+                padding: 20px 0px 10px 0px;
+            }
+            
+            .secp1 {
+                font-size: 16px;
+            }
+            
+            .card {
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .roow {
+                flex-direction: column;
+            }
+            
+            .wrapper {
+                padding: 20px;
+            }
+        }
+
+        /* Overlay for mobile menu */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 98;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        /* Close button for menu */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <a class="logo" href=""><img src="https://via.placeholder.com/90x30/000000/FFFFFF/?text=NB-Logo" alt="NB Logo"></a>
+            
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <div class="close-btn" id="closeBtn">
+                    <i class="fas fa-times"></i>
+                </div>
+                
+                <div class="navitem">
+                    <a href="#"><li>New</li></a>
+                    <a href="#"><li>Men</li></a>
+                    <a href="#"><li>Women</li></a>
+                    <a href="#"><li>Kids</li></a>
+                    <a href="#"><li>Sale</li></a>
+                </div>
+                
+                <div class="div2">
+                    <div style="position: relative;">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: white;"></i>
+                        <input type="text" placeholder="Search" name="search" id="search">
+                    </div>
+                    <a href="#"><i class="fa-regular fa-user" style="color: white; font-size: 20px;"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping" style="color: white; font-size: 20px;"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <section id="section-1">
+        <div class="bk-content">
+            <h1>The740</h1>
+            <p class="secp1">
+                If there's a wrong way to wear them, we haven't thought of it.
+            </p>
+            <button class="btn-1">shop now</button>
+        </div>
+    </section>
+
+    <section class="sec3 container">
+        <div class="row">
+            <div class="col-50"><h2>Trending now</h2></div>
+            <div class="col-50 row">
+                <h3>Men</h3>
+                <h3>Women</h3>
+                <h3>Kid</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 1" />
+                    </div>
+                    <h4>Title</h4>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 2" />
+                    </div>
+                    <h4>Title</h4>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 3" />
+                    </div>
+                    <h4>Title</h4>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 4" />
+                    </div>
+                    <h4>Title</h4>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-50">
+                <div class="card1">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/600x400" alt="Promo 1" />
+                    </div>
+                    <h4>TitleRunning, uninterrupted</h4>
+                    <h4>Running, uninterrupted</h4>
+                    <button class="btn12">Shop now</button>
+                </div>
+            </div>
+            <div class="col-50">
+                <div class="card1">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/600x400" alt="Promo 2" />
+                    </div>
+                    <h4>Running, uninterrupted</h4>
+                    <h4>Running, uninterrupted</h4>
+                    <button class="btn12">Shop now</button>
+                    <button class="btn12">Shop Retro Running</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 5" />
+                    </div>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 6" />
+                    </div>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://placeholder.com/300x300" alt="Product 7" />
+                    </div>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 8" />
+                    </div>
+                    <h4>Title</h4>
+                    <p>350 $</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="atext container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, autem!</p>
+    </div>
+
+    <div class="roow">
+        <p>Lorem ipsum dolor sit, amet</p>
+        <button class="btn12">Sign Up</button>
+    </div>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-70">
+                <div class="row">
+                    <ul>
+                        <li>Help</li>
+                        <li>Contact us</li>
+                        <li>Start a return</li>
+                        <li>Track your order</li>
+                        <li>Become a member</li>
+                        <li>Size guide</li>
+                        <li>FAQ</li>
+                        <li>How early access works</li>
+                    </ul>
+
+                    <ul>
+                        <li>Shop</li>
+                        <li>Find a store</li>
+                        <li>Gift cards</li>
+                        <li>Shipping information</li>
+                        <li>Sale exclusions</li>
+                        <li>Custom uniforms</li>
+                        <li>Reconsidered</li>
+                    </ul>
+
+                    <ul>
+                        <li>About Us</li>
+                        <li>Our Purpose</li>
+                        <li>Responsible leadership</li>
+                        <li>New Balance Foundation</li>
+                        <li>Careers</li>
+                        <li>The TRACK at New Balance</li>
+                        <li>Press box</li>
+                        <li>Medical Plan Information</li>
+                    </ul>
+
+                    <ul>
+                        <li>For You</li>
+                        <li>Special discounts</li>
+                        <li>Idea submission</li>
+                        <li>Affiliate program</li>
+                        <li>Counterfeit products</li>
+                        <li>Accessibility statement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-40"></div>
+        </div>
+    </section>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+        
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+        
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.navitem a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+</body>
+
+</html>
