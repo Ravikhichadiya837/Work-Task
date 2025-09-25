@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+
+        function hello1(name) {
+
+            console.log("Hello " + name);
+        }
+
+        function hello2(callback) {
+            console.log("start");
+
+            setTimeout(() => {
+                callback("pluse");
+            }, 2000);
+
+            console.log("end");
+        }
+
+        hello2(hello1);
+
+    </script>
+</body>
+
+</html>
